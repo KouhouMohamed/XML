@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Entreprise>
+    <Product RefProd="P1" Libelle="Tonik"/>
+    <Product RefProd="P2" Libelle="Trident"/>
+    <Product RefProd="P3" Libelle="CocaCola"/>
+    <Client RefClient="CL1">
+        <Commande date="28/10/2020">
+            <Ligne products="P1" Qte="12"/>
+            <Ligne products="P3" Qte="10"/>
+        </Commande>
+        <Commande date="23/12/2000">
+            <Ligne products="P3" Qte="20"/>
+            <Ligne products="P2" Qte="10"/>
+            <Ligne products="P3" Qte="18"/>
+        </Commande>
+    </Client>
+    <Client RefClient="CL2">
+        <Commande date="10/10/2010">
+            <Ligne products="P1" Qte="5"/>
+        </Commande>
+    </Client>
+</Entreprise>

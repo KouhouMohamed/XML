@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified"> 
+    <xs:element name="repertoir">
+        <xs:complexType>
+            <xs:sequence maxOccurs="unbounded" minOccurs="0">
+                <xs:element name="contact">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="nom" type="Name"/>
+                            <xs:element name="prenom" type="Name" minOccurs="0"/>
+                            <xs:element name="telephone" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:simpleContent>
+                                        <xs:extension base="Number">
+                                            <xs:attribute name="type" use="required">
+                                                <xs:simpleType>
+                                                    <xs:restriction base="xs:string">
+                                                        <xs:enumeration value="mobile"/>
+                                                        <xs:enumeration value="bureau"/>
+                                                        <xs:enumeration value="domicile"/>
+                                                    </xs:restriction>
+                                                </xs:simpleType>
+                                            </xs:attribute>
+                                        </xs:extension>
+                                    </xs:simpleContent>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="email" type="Email" maxOccurs="unbounded" minOccurs="0"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:simpleType name="Name">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[a-zA-z ]{5,}"></xs:pattern>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="Number">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="\+[0-9]{11,14}"></xs:pattern>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="Email">
+        <xs:restriction base="xs:string">
+            <xs:pattern value=".+@.+"></xs:pattern>
+        </xs:restriction>
+    </xs:simpleType>
+</xs:schema>

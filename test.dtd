@@ -1,0 +1,9 @@
+<!ELEMENT A (A|B|C)+>
+<!ELEMENT C EMPTY >
+<!ELEMENT B EMPTY >
+<!ATTLIST A at CDATA "red" >
+<!ATTLIST B att (red|black) "black" >
+<!ATTLIST C id ID #REQUIRED>
+<!ATTLIST B chef IDREF #REQUIRED >
+<!ATTLIST A value CDATA #IMPLIED >
+<!ATTLIST C mark CDATA #FIXED "IBM" >

@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<!DOCTYPE A SYSTEM "test.dtd">
+<A at="green">
+    <B chef="Kouhou"/><C id="Kouhou"/><C id="Kouho"/>
+    <A value="pardef"><B chef="Kouho"/><C id="mohamed" mark="IBM"/> <B chef="mohamed"/></A>
+</A>

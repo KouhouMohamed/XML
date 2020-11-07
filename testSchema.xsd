@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified"> 
+    <xsd:element name="librery">
+        <xsd:complexType>
+            <xsd:sequence maxOccurs="unbounded">
+                <xsd:element name="livre">
+                    <xsd:complexType>
+                        <xsd:sequence>
+                            <xsd:element name="titre">
+                                <xsd:simpleType>
+                                    <xsd:restriction base="xsd:string">
+                                        <xsd:maxLength value="40"/>
+                                        <xsd:minLength value="4"/>
+                                    </xsd:restriction>
+                                </xsd:simpleType>
+                            </xsd:element>
+                        </xsd:sequence>
+                    </xsd:complexType>
+                </xsd:element>
+            </xsd:sequence>
+            <xsd:attribute name="date" type="xsd:date" use="required"/>
+            <xsd:attribute name="localisation" type="type_liste"/>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:simpleType name="type_liste">
+        <xsd:list itemType="xsd:string"/>
+    </xsd:simpleType>
+    <xsd:simpleType name="type_divers">
+        <xsd:list itemType="xsd:positiveInteger"/>
+    </xsd:simpleType>
+    <xsd:simpleType name="type_union">
+        <xsd:union memberTypes="type_divers type_liste" />
+    </xsd:simpleType>
+    
+</xsd:schema>

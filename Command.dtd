@@ -1,0 +1,23 @@
+<!ELEMENT Entreprise (Product+,Client*) >
+<!ELEMENT Client (Commande)+ >
+<!ELEMENT Commande (Ligne+) >
+<!ELEMENT Product EMPTY >
+<!ELEMENT Ligne EMPTY >
+
+<!ATTLIST Client
+    RefClient ID #REQUIRED
+>
+
+<!ATTLIST Commande
+    date CDATA #REQUIRED
+>
+
+<!ATTLIST Product 
+    RefProd ID #REQUIRED 
+    Libelle CDATA #IMPLIED
+>
+
+<!ATTLIST Ligne
+    products IDREF #REQUIRED
+    Qte CDATA #REQUIRED
+>
