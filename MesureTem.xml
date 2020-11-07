@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<meteo>
+    <mesure date="2020-11-25">
+        <ville nom="tata" temperature="50"/>
+        <ville nom="casa" temperature="20"/>
+    </mesure>
+    <mesure date="2020-11-26">
+        <ville nom="tata" temperature="22.5"/>
+        <ville nom="casa" temperature="26.1"/>
+    </mesure>
+</meteo>
